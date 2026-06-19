@@ -132,6 +132,12 @@ section {
   padding: 96px 0;
 }
 
+h1[id],
+h2[id],
+.service-card[id] {
+  scroll-margin-top: 118px;
+}
+
 .hero {
   position: relative;
   min-height: 78vh;
@@ -141,29 +147,24 @@ section {
 
 .hero-layout {
   width: 100%;
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
-  grid-template-rows: auto auto;
-  column-gap: clamp(40px, 6vw, 76px);
-  row-gap: 0;
-  align-items: start;
 }
 
 .hero-content {
-  grid-column: 1;
-  grid-row: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  column-gap: clamp(40px, 6vw, 76px);
+  align-items: start;
   position: relative;
   z-index: 1;
 }
 
-.hero-title {
-  grid-column: 1 / -1;
-  grid-row: 1;
+.hero-content > :not(.hero-visual) {
+  grid-column: 1;
 }
 
 .hero-visual {
   grid-column: 2;
-  grid-row: 2;
+  grid-row: 1 / span 5;
   width: 100%;
   max-width: 430px;
   margin: 0;
@@ -366,6 +367,8 @@ p {
   padding: 28px;
   border: 1px solid var(--fine-line);
   background: var(--near-black);
+  display: flex;
+  flex-direction: column;
 }
 
 .service-accent {
@@ -386,6 +389,24 @@ p {
 .service-card p {
   color: var(--soft-white);
   font-size: 1rem;
+}
+
+.service-action {
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--white);
+  font-size: 0.98rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--deep-violet);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+}
+
+.service-action:hover {
+  color: var(--acid-lime);
+  text-decoration-color: var(--acid-lime);
 }
 
 .talk-section {
@@ -453,10 +474,9 @@ p {
 }
 
 @media (max-width: 960px) {
-  .hero-layout {
+  .hero-content {
     grid-template-columns: minmax(0, 1fr) minmax(260px, 0.6fr);
     column-gap: 36px;
-    row-gap: 0;
   }
 
   .hero-visual {
@@ -530,15 +550,13 @@ p {
     padding-top: 72px;
   }
 
-  .hero-layout {
+  .hero-content {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
     column-gap: 0;
     row-gap: 0;
   }
 
-  .hero-title,
-  .hero-content,
+  .hero-content > :not(.hero-visual),
   .hero-visual {
     grid-column: 1;
     grid-row: auto;
@@ -547,7 +565,7 @@ p {
   .hero-visual {
     width: min(100%, 520px);
     max-width: none;
-    margin-top: 44px;
+    margin: 32px auto 1.25rem;
     justify-self: center;
   }
 
