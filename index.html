@@ -19,7 +19,7 @@
         "name": "Change Rebounded",
         "url": "https://change-rebounded.com/",
         "email": "gerad@change-rebounded.com",
-        "logo": "https://change-rebounded.com/images/Black%20background%20logo%20transparent.png",
+        "logo": "https://change-rebounded.com/images/Combined%20logo%20transparent%20black%20background.png",
         "description": "Change Rebounded helps organisations get unstuck by seeing the boundaries shaping change, technology projects and post-system resets, then finding a better way forward.",
         "slogan": "Change your boundaries. Change your future.",
         "knowsAbout": [
@@ -71,11 +71,19 @@
     </script>
   </head>
   <body>
+    <aside class="acknowledgement-overlay" id="first-nations-acknowledgement" aria-label="First Nations acknowledgement" hidden>
+      <div class="acknowledgement-box">
+        <button class="acknowledgement-close" type="button" aria-label="Close acknowledgement" data-acknowledgement-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p>&ldquo;I acknowledge the First Nations peoples of Australia and pay my respects to Elders past, present, and emerging. I walk, live, and come to Knowledge across Yuggera, Turrbal, and Yugambeh Country.&rdquo;</p>
+      </div>
+    </aside>
+
     <header class="site-header">
       <div class="header-inner" aria-label="Change Rebounded">
         <a class="brand" href="index.html" aria-label="Change Rebounded home">
-          <img class="brand-wordmark" src="images/Wordmark black background.png" alt="Change Rebounded">
-          <img class="brand-mark" src="images/Black background logo transparent.png" alt="Change Rebounded">
+          <img class="brand-combined" src="images/Combined logo transparent black background.png" alt="Change Rebounded">
         </a>
         <nav class="header-actions" aria-label="Primary navigation">
           <a class="header-link" href="how-we-help.html">How We Help</a>
@@ -100,9 +108,6 @@
             </figure>
             <p>&lsquo;Just right&rsquo; only exists in the fairytale world of slide decks. You already have the answers, we&rsquo;ll help you find them.</p>
             <p>Not sure if you&rsquo;re stuck? <a href="case-studies.html">Read this case study to learn more.</a></p>
-            <div class="cta-row" aria-label="Contact options">
-              <a class="button button-primary" href="mailto:gerad@change-rebounded.com">Start a conversation</a>
-            </div>
           </div>
         </div>
       </section>
@@ -110,7 +115,7 @@
       <section class="talk-section" aria-labelledby="ready-to-talk">
         <div class="talk-inner">
           <div>
-            <h2 id="ready-to-talk">Ready to talk?</h2>
+            <h2 id="ready-to-talk">Explore your possibilities</h2>
           </div>
           <div class="talk-actions">
             <a class="talk-link" href="mailto:gerad@change-rebounded.com">
@@ -126,5 +131,66 @@
       <p>Copyright &copy; 2026 Change Rebounded - All Rights Reserved.</p>
       <a href="mailto:gerad@change-rebounded.com">gerad@change-rebounded.com</a>
     </footer>
+
+    <script>
+      (function () {
+        var overlay = document.getElementById("first-nations-acknowledgement");
+        if (!overlay) {
+          return;
+        }
+
+        var closeButton = overlay.querySelector("[data-acknowledgement-close]");
+        var storageKey = "changeReboundedAcknowledgementDismissed";
+
+        function hasDismissed() {
+          try {
+            if (typeof window.sessionStorage === "undefined") {
+              return false;
+            }
+            return window.sessionStorage.getItem(storageKey) === "true";
+          } catch (error) {
+            return false;
+          }
+        }
+
+        function rememberDismissed() {
+          try {
+            if (typeof window.sessionStorage === "undefined") {
+              return;
+            }
+            window.sessionStorage.setItem(storageKey, "true");
+          } catch (error) {
+            return;
+          }
+        }
+
+        function cameFromInsideSite() {
+          if (!document.referrer) {
+            return false;
+          }
+
+          try {
+            return new URL(document.referrer).origin === window.location.origin;
+          } catch (error) {
+            return false;
+          }
+        }
+
+        function hideAcknowledgement() {
+          overlay.hidden = true;
+        }
+
+        if (!hasDismissed() && !cameFromInsideSite()) {
+          overlay.hidden = false;
+        }
+
+        if (closeButton) {
+          closeButton.addEventListener("click", function () {
+            rememberDismissed();
+            hideAcknowledgement();
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
