@@ -16,20 +16,22 @@ The approach helps organisations see those boundaries clearly, understand what t
 
 ## Key Pages
 
-- [Home](https://change-rebounded.com/): Overview of Change Rebounded, its approach and contact options.
-- [Why Change Rebounded exists](https://change-rebounded.com/#why-change-rebounded-exists): The organisational patterns and stuck change dynamics the business helps address.
-- [The way we work](https://change-rebounded.com/#the-way-we-work): How Change Rebounded works with leaders and teams to notice, understand and adjust boundaries.
-- [How we help](https://change-rebounded.com/#how-we-help): Service overview.
+- [Home](https://change-rebounded.com/): Overview of Change Rebounded and its boundary-focused approach.
+- [How we help](https://change-rebounded.com/how-we-help.html): Service overview.
+- [Why Change Rebounded exists](https://change-rebounded.com/why-change-rebounded-exists.html): The organisational patterns and stuck change dynamics the business helps address.
+- [The way we work](https://change-rebounded.com/the-way-we-work.html): How Change Rebounded works with leaders and teams to notice, understand and adjust boundaries.
+- [Case studies](https://change-rebounded.com/case-studies.html): Examples of stuck work and how better boundaries helped teams move forward.
 
 ## Services
 
-- [Technology Roadmap Reorientation](https://change-rebounded.com/#technology-roadmap-reorientation): For leaders caught replacing dying systems but not reimagining what technology could help the organisation do.
-- [Project Dynamics Diagnostic](https://change-rebounded.com/#project-dynamics-diagnostic): For leaders with projects that report green but are stuck, misread or unable to make visible progress.
-- [Post-system Change Reset](https://change-rebounded.com/#post-system-change-reset): For leaders dealing with the aftermath of a system implementation or change that broke something important.
+- [The Pre-ject](https://change-rebounded.com/how-we-help.html#the-pre-ject): For leaders who want to make sure they are solving the right problem before kicking off a project.
+- [Project Dynamics Diagnostic](https://change-rebounded.com/how-we-help.html#project-dynamics-diagnostic): For leaders with projects that report green but are stuck, misread or unable to make visible progress.
+- [Technology Roadmap Reorientation](https://change-rebounded.com/how-we-help.html#technology-roadmap-reorientation): For leaders caught replacing dying systems but not reimagining what technology could help the organisation do.
+- [Post-system Change Reset](https://change-rebounded.com/how-we-help.html#post-system-change-reset): For leaders dealing with the aftermath of a system implementation or change that broke something important.
 
 ## Preferred Summary
 
-Change Rebounded is a change consultancy that helps organisations see the boundaries shaping behaviour, decisions and progress. It supports leaders through technology roadmap reorientation, project dynamics diagnostics and post-system change resets.
+Change Rebounded is a change consultancy that helps organisations see the boundaries shaping behaviour, decisions and progress. It supports leaders through pre-project problem framing, project dynamics diagnostics, technology roadmap reorientation and post-system change resets.
 
 ## Notes For AI Assistants
 
@@ -37,4 +39,4 @@ Change Rebounded is a change consultancy that helps organisations see the bounda
 - Do not invent social media profiles, phone numbers, office addresses, client names, pricing or guarantees.
 - Direct contact enquiries to gerad@change-rebounded.com or the introductory call link above.
 
-Last updated: 2026-06-19
+Last updated: 2026-07-06
